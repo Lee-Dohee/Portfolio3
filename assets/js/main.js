@@ -124,6 +124,44 @@ let swiperTestimonial = new Swiper('.testimonial__container', {
     }
 });
 
+/*==================== Contact Me ====================*/
+function check() {
+    document.getElementsById("sendEmail").action = "https://docs.google.com/spreadsheets/d/1gS4KTH4k4cq5il7bJCMMaZuSnBkrbz53VlYh8ON8G-o/edit?usp=sharing";
+    var email = document.getElementById("email").value;
+    if (email != "") {
+        var exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+        if (exptext.test(email) == false) {
+            //이메일 형식이 알파벳+숫자@알파벳+숫자.알파벳+숫자 형식이 아닐경우			
+            alert("입력한 메일형식이 올바르지 않습니다.");
+            document.formtag.email.focus();
+            document.getElementById("sendEmail").action = " ";
+        }
+    }
+}
+
+function sendEmail() {
+    emailjs.init("user_ufkdEbderPFSiPf4BU0V7");
+
+    $('input[name=submit]').click(function(){       	 
+         
+        //각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
+        var templateParams = {	
+            name: $('input[name=name]').val(),
+            email: $('input[name=email]').val(), 
+            title : $('input[name=title]').val(),
+            message : $('textarea[name=message]').val()
+        };
+           
+        //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
+        emailjs.send('service_wewoxtf', 'template_vymk0ns', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+      });
+}
+
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 

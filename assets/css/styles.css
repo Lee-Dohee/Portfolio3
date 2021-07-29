@@ -514,33 +514,42 @@ img {
     width: 80%;
 }
 .skills__js {
-    width: 60%;
-}
-.skills__react {
-    width: 85%;
+    width: 50%;
 }
 
-.skills__php {
+.skills__java {
+    width: 90%;
+}
+.skills__jsp {
     width: 80%;
 }
-.skills__node {
+.skills__spring {
+    width: 60%;
+}
+.skills__android {
+    width: 80%;
+}
+.skills__swift {
     width: 70%;
 }
-.skills__firebase {
+.skills__mysql {
     width: 90%;
+}
+.skills__sqlite {
+    width: 60%;
 }
 .skills__python {
-    width: 55%;
+    width: 50%;
+}
+.skills__json {
+    width: 40%;
 }
 
-.skills__frigma {
-    width: 90%;
-}
-.skills__sketch {
-    width: 85%;
-}
 .skills__photoshop {
-    width: 85%;
+    width: 50%;
+}
+.skills__illust {
+    width: 60%;
 }
 
 .skills__close .skills__list {
@@ -955,6 +964,11 @@ img {
 .footer__link,
 .footer__social {
     color: #fff;
+}
+
+.submit__button {
+    border: 0;
+    outline: 0;
 }
 
 /*========== SCROLL UP ==========*/
