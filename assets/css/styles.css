@@ -492,6 +492,14 @@ img {
     font-weight: var(--font-medium);
 }
 
+.skills__prepare {
+    color: var(--text-color-light);
+}
+
+.skills__icon-prepare {
+    padding-left: .3rem;
+}
+
 .skills__bar,
 .skills__percentage {
     height: 5px;
@@ -505,6 +513,10 @@ img {
 .skills__percentage {
     display: block;
     background-color: var(--first-color);
+}
+
+.skills__percentage-prepare {
+    opacity: .2;
 }
 
 .skills__html {
