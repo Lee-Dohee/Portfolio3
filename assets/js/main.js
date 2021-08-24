@@ -139,29 +139,6 @@ let swiperTestimonial = new Swiper('.testimonial__container', {
 //     }
 // }
 
-// function sendEmail() {
-//     emailjs.init("user_ufkdEbderPFSiPf4BU0V7");
-
-//     $('input[name=submit]').click(function(){       	 
-         
-//         //각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
-//         var templateParams = {	
-//             name: $('input[name=name]').val(),
-//             email: $('input[name=email]').val(), 
-//             title : $('input[name=title]').val(),
-//             message : $('textarea[name=message]').val()
-//         };
-           
-//         //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
-//         emailjs.send('service_wewoxtf', 'template_vymk0ns', templateParams)
-//             .then(function(response) {
-//                 console.log('SUCCESS!', response.status, response.text);
-//             }, function(error) {
-//                 console.log('FAILED...', error);
-//             });
-//       });
-// }
-
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 

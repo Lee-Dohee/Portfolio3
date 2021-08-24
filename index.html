@@ -43,8 +43,8 @@
                         </li>
 
                         <li class="nav__item">
-                            <a href="#services" class="nav__link">
-                                <i class="uil uil-briefcase-alt nav__icon"></i> Services
+                            <a href="#qualification" class="nav__link">
+                                <i class="uil uil-briefcase-alt nav__icon"></i> Qualification
                             </a>
                         </li>
 
@@ -382,7 +382,7 @@
             </section>
 
             <!-- QUALIFICATION -->
-            <section class="qualification section">
+            <section class="qualification section" id="qualification">
                 <h2 class="section__title">Qualification</h2>
                 <span class="section__subtitle">Mypersonal journey</span>
 
@@ -583,7 +583,7 @@
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Bebe Goods (Swift)</h3>
-                                <p class="portfolio__description">하루 한줄 20자 이내로 작성하는 일기.<br> 일기를 쓰기 힘든 사람들을 위해 간단한 구성이며 20자도 쓰기 싫다면 이모티콘만 선택하여 작성할 수 있습니다.</p>
+                                <p class="portfolio__description">필요 없어진 아기 용품을 물물 교환하는 나눔 APP<br>불필요한 소비와 쓰레기를 줄임으로써 환경적 영향을 최소화하는 친환경 어플리케이션입니다.</p>
                                 <a download="" href="assets/pdf/Swift.pdf" class="button button--flex button--small portfolio__button">
                                     PPT
                                     <i class="uil uil-arrow-right button__icon"></i>
@@ -597,11 +597,11 @@
 
                         <!-- PORTFOLIO 6 -->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/portfolio_Swift.png" alt="" class="portfolio__img" style="height: 200px; width: auto;">
+                            <img src="assets/img/portfolio3.jpg" alt="" class="portfolio__img" style="height: 200px; width: auto;">
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Daily Caffeine (Swift)</h3>
-                                <p class="portfolio__description">하루 한줄 20자 이내로 작성하는 일기.<br> 일기를 쓰기 힘든 사람들을 위해 간단한 구성이며 20자도 쓰기 싫다면 이모티콘만 선택하여 작성할 수 있습니다.</p>
+                                <p class="portfolio__description">오늘 먹은 카페인을 기록하는 App</p>
                                 <a href="#" class="button button--flex button--small portfolio__button">
                                     Apple Store
                                     <i class="uil uil-arrow-right button__icon"></i>
@@ -623,8 +623,27 @@
                 </div>
             </section>
 
+            <!-- PROJECT IN MIND -->
+            <!-- <section class="project section">
+                <div class="project__bg">
+                    <div class="project__container container grid">
+                        <div class="project__data">
+                            <h2 class="project__title">You have a new project</h2>
+                            <p class="project__description">Contact me now and get a 30% discount on your new project.</p>
+                            <a href="#contact" class="button button--flex button-white">
+                                Contact Me
+                                <i class="uil uil-message project__icon button__icon"></i>
+                            </a>
+                        </div>
+
+                        <img src="assets/img/project.png" alt="" class="project__img">
+                    </div>
+                </div>
+
+            </section> -->
+
             <!-- CONTACT ME -->
-            <section class="contact section" id="contact">
+            <section class="contact section" id="contact" style="margin-top: 100px;">
                 <h2 class="section__title">Contact Me</h2>
                 <span class="section__subtitle">Get in touch</span>
 
@@ -658,11 +677,12 @@
                         </div>
                     </div>
 
-                    <form action="" class="contact__form grid" id="contact-form"  data-email="example@email.net">
+                    <form class="contact__form grid" id="contact-form" name="cf" data-email="example@email.net" onsubmit="return check()">
+                        <input type="hidden" name="contact_number">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
                                 <label for="" class="contact__label">Name</label>
-                                <input type="text" name="name" class="contact__input">
+                                <input type="text" name="name" class="contact__input" id="name">
                             </div>
                             <div class="contact__content">
                                 <label for="" class="contact__label">Email</label>
@@ -672,19 +692,18 @@
 
                         <div class="contact__content">
                             <label for="" class="contact__label">Title</label>
-                            <input type="text" name="title" class="contact__input">
+                            <input type="text" name="title" class="contact__input" id="title">
                         </div>
                         <div class="contact__content">
                             <label for="" class="contact__label">Message</label>
-                            <textarea name="message" id="" cols="0" rows="7" class="contact__input"></textarea>
+                            <textarea name="message" id="message" cols="0" rows="7" class="contact__input"></textarea>
                         </div>
 
                         <div>
-                            <input type="submit" value="Send Message" class="button button--flex submit__button">
-                            <a href="#" >
-                                Send Message
+                            <div class="submit">
+                                <input type="submit" value="Send Message" id="send" class="button--flex submit__button">
                                 <i class="uil uil-message button__icon"></i>
-                            </a>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -702,7 +721,7 @@
 
                     <ul class="footer__links">
                         <li>
-                            <a href="#services" class="footer__link">Services</a>
+                            <a href="#skills" class="footer__link">Skills</a>
                         </li>
                         <li>
                             <a href="#portfolio" class="footer__link">Portfolio</a>
@@ -712,7 +731,7 @@
                         </li>
                     </ul>
 
-                    <div class="footer__socials">
+                    <!-- <div class="footer__socials">
                         <a href="https://www.facebook.com/" target="_blank" class="footer__social">
                             <i class="uil uil-facebook-f"></i>
                         </a>
@@ -722,7 +741,7 @@
                         <a href="https://twitter.com/" target="_blank" class="footer__social">
                             <i class="uil uil-twitter-alt"></i>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
 
                 <p class="footer__copy">&#169; LeeDoHee. All right reserved</p>
@@ -734,6 +753,11 @@
             <i class="uil uil-arrow-up scrollup__icon"></i>
         </a>
 
+
+
+
+
+
         <!-- SWIPER JS -->
         <script src="assets/js/swiper-bundle.min.js"></script>
 
@@ -741,31 +765,7 @@
         <script src="assets/js/main.js"></script>
 
         <!-- Email -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-        <!-- <script type="text/javascript">
-            (function() {
-                emailjs.init("user_ufkdEbderPFSiPf4BU0V7");
-
-                $('input[name=submit]').click(function(){       	 
-                    
-                    //각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
-                    var templateParams = {	
-                        name: $('input[name=name]').val(),
-                        email: $('input[name=email]').val(), 
-                        title : $('input[name=title]').val(),
-                        message : $('textarea[name=message]').val()
-                    };
-                    
-                    //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
-                    emailjs.send('service_wewoxtf', 'template_vymk0ns', templateParams)
-                    .then(function(response) {
-                        console.log('SUCCESS!', response.status, response.text);
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-                });
-            })();
-        </script> -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
         <script type="text/javascript">
             (function() {
                 emailjs.init('user_ufkdEbderPFSiPf4BU0V7');
@@ -776,17 +776,63 @@
                 document.getElementById('contact-form').addEventListener('submit', function(event) {
                     event.preventDefault();
 
-                    // generate a five digit number for the contact_number variable
-                    this.contact_number.value = Math.random() * 100000 | 0;
-
-                    // these IDs from the previous steps
-                    emailjs.sendForm('contact_service', 'contact_form', this).then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
+                    if(cf.name.value == "") {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: '이름을 입력하세요.',
+                            text: '모든 항목을 입력해야 발송 가능합니다.',
+                        });
+                        cf.name.focus();
+                    }else if(cf.email.value == "") {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: '이메일을 입력하세요.',
+                            text: '모든 항목을 입력해야 발송 가능합니다.',
+                        });
+                        cf.email.focus();
+                    }else if(cf.title.value == "") {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: '제목을 입력하세요.',
+                            text: '모든 항목을 입력해야 발송 가능합니다.',
+                        });
+                        cf.title.focus();
+                    }else if(cf.message.value == "") {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: '내용을 입력하세요.',
+                            text: '모든 항목을 입력해야 발송 가능합니다.',
+                        });
+                        cf.message.focus();
+                    }else {
+                        // generate a five digit number for the contact_number variable
+                        this.contact_number.value = Math.random() * 100000 | 0;
+    
+                        // these IDs from the previous steps
+                        emailjs.sendForm('service_wewoxtf', 'template_vymk0ns', this)
+                        .then(function() {
+                            console.log('SUCCESS!');
+                            Swal.fire({
+                                icon: 'success',
+                                title: '메일이 성공적으로 발송되었습니다.',
+                                text: '메일 보내주셔서 감사합니다.',
+                            });
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                            Swal.fire({
+                                icon: 'error',
+                                title: '메일 발송에 오류가 발생하였습니다.',
+                                text: '내용을 메모장에 옮긴 후 새로고침 해주세요.',
+                            });
+                        });
+                    }
                 });
             }
         </script>
+
+        <!-- Alert Custom -->
+        <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
     </body>
 </html>

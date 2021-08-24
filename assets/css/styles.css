@@ -972,6 +972,25 @@ img {
 .submit__button {
     border: 0;
     outline: 0;
+    font-size: 1.3rem; 
+    font: var(--body-font); 
+    font-weight: var(--font-medium); 
+    color: #fff; 
+    background-color: var(--first-color);
+}
+
+.submit {
+    display: inline-block; 
+    padding: 1rem; 
+    border-radius: .5rem; 
+    background-color: var(--first-color);
+    color: #fff;
+    font-weight: var(--font-medium); 
+}
+
+.submit:hover,
+.submit:hover .submit__button {
+    background-color: var(--first-color-alt);
 }
 
 /*========== SCROLL UP ==========*/
