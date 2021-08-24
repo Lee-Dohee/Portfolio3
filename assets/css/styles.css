@@ -544,6 +544,9 @@ img {
 .skills__json {
     width: 40%;
 }
+.skills__flutter {
+    width: 60%;
+}
 
 .skills__photoshop {
     width: 50%;
